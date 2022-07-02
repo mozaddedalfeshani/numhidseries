@@ -13,6 +13,7 @@ int main()
 
     int start, arraydtector;
 
+again:
     cout << " Work in progress ! Don't upload any number which little than initial value & minus sign" << endl;
 
     cout << "Enter what is the initial value" << endl;
@@ -72,7 +73,7 @@ input:
 
     for (i = userarraysize; i >= 1; i--)
     {
-        cout << array[i] << endl;
+        cout << "\033[0;32m" << array[i] << "\033[0m" << endl;
     }
 
     cout << endl
@@ -92,6 +93,17 @@ input:
             continue;
         }
         cout << "  " << i << endl;
+    }
+    cout << " \033[0;36mEnter 1 for Again 2 for Break \033[0m" << endl;
+    int ent;
+    cin >> ent;
+    if (ent == 1)
+    {
+        goto again;
+    }
+    else
+    {
+        cout << "\033[0;32mSee You Next Time! \033[0m" << endl;
     }
 
     return 0;
