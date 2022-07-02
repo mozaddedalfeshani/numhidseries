@@ -87,10 +87,11 @@ input:
         if (array[temo] == i)
         {
             temo--;
-            cout << "\033[1;31mHide" << endl;
+            cout << "\033[1;31mHide\033[0m\n"
+                 << endl;
             continue;
         }
-        cout << i << endl;
+        cout << "  " << i << endl;
     }
 
     return 0;
