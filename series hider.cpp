@@ -22,7 +22,8 @@ int main()
     cin >> last_value;
 
 input:
-    cout << "How Many Number You want to remove from series ?" << endl;
+    cout << "How Many Number You want to remove from series ?"
+         << endl;
     cin >> userarraysize;
     int array[userarraysize + 1];
     if (userarraysize > last_value || userarraysize < in)
@@ -66,16 +67,17 @@ input:
 
     // print array shorting number
 
-    // cout << "Your deserved hidden number , by serially:\n"
-    //      << endl;
+    cout << "Your deserved hidden number , by serially:\n"
+         << endl;
 
-    // for (i = userarraysize; i >= 1; i--)
-    // {
-    //     cout << array[i] << endl;
-    // }
+    for (i = userarraysize; i >= 1; i--)
+    {
+        cout << array[i] << endl;
+    }
 
     cout << endl
-         << " Your Answer will show belew" << endl<< endl;
+         << " Your Answer will show belew" << endl
+         << endl;
 
     // print fast to last number and hide deserved number
 
@@ -85,7 +87,7 @@ input:
         if (array[temo] == i)
         {
             temo--;
-            cout << "Hide" << endl;
+            cout << "\033[1;31mHide" << endl;
             continue;
         }
         cout << i << endl;
