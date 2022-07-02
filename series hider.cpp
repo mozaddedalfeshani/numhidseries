@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 
-    int array[1000];
+    // int array[1000];
     short int userarraysize;
     short int i, in;
     short int last_value, temo, temp;
@@ -13,7 +13,7 @@ int main()
 
     int start, arraydtector;
 
-    cout << " Work in progress ! Don't upload any number which little than initial value" << endl;
+    cout << " Work in progress ! Don't upload any number which little than initial value & minus sign" << endl;
 
     cout << "Enter what is the initial value" << endl;
     cin >> in;
@@ -21,8 +21,15 @@ int main()
     cout << "What is the last value ? " << endl;
     cin >> last_value;
 
+input:
     cout << "How Many Number You want to remove from series ?" << endl;
     cin >> userarraysize;
+    int array[userarraysize + 1];
+    if (userarraysize > last_value || userarraysize < in)
+    {
+        cout << "Enter Correct Value" << endl;
+        goto input;
+    }
 
     cout << "Enter those number which you won't show in terminal ?" << endl;
 
@@ -59,16 +66,16 @@ int main()
 
     // print array shorting number
 
-    cout << "Your deserved hidden number , by serially:\n"
-         << endl;
+    // cout << "Your deserved hidden number , by serially:\n"
+    //      << endl;
 
-    for (i = userarraysize; i >= 1; i--)
-    {
-        cout << array[i] << endl;
-    }
+    // for (i = userarraysize; i >= 1; i--)
+    // {
+    //     cout << array[i] << endl;
+    // }
 
     cout << endl
-         << " Your Answer will show belew" << endl;
+         << " Your Answer will show belew" << endl<< endl;
 
     // print fast to last number and hide deserved number
 
@@ -78,6 +85,7 @@ int main()
         if (array[temo] == i)
         {
             temo--;
+            cout << "Hide" << endl;
             continue;
         }
         cout << i << endl;
