@@ -73,7 +73,7 @@ input:
 
     for (i = userarraysize; i >= 1; i--)
     {
-        cout << "\033[0;32m" << array[i] << "\033[0m" << endl;
+        cout << "" << array[i] << "" << endl;
     }
 
     cout << endl
@@ -88,13 +88,13 @@ input:
         if (array[temo] == i)
         {
             temo--;
-            cout << "\033[1;31mHide\033[0m\n"
+            cout << "Hide"
                  << endl;
             continue;
         }
         cout << "  " << i << endl;
     }
-    cout << " \033[0;36mEnter 1 for Again 2 for Break \033[0m" << endl;
+    cout << " Enter 1 for Again 2 for Break " << endl;
     int ent;
     cin >> ent;
     if (ent == 1)
@@ -103,7 +103,7 @@ input:
     }
     else
     {
-        cout << "\033[0;32mSee You Next Time! \033[0m" << endl;
+        cout << "See You Next Time!" << endl;
     }
 
     return 0;
