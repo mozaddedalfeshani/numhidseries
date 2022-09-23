@@ -6,11 +6,11 @@ and select which number is this , And show a magic BoomBoom.
 
 How you run this code:<br />
 
-=> After cloning code you need compile this code , OK ! How ? follow bellow instruction for run this code
-=> Compilling process
+=> After cloning code you need compile this code , OK ! How ? follow bellow instruction for run this code<br />
+=> Compilling process<br />
 
 *Just open teminal (your locate file/folder) <br />
-** type [ g++ numhidseries.cpp ]         //copy without [] <br />
+** type [ g++ numhidseries.cpp ]    &nbsp;     //copy without [] <br />
 
 => After type ** it will create a.out file, now you need to run from a.out. Ok copy next line for run Program<br />
 
