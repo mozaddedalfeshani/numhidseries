@@ -10,7 +10,7 @@ How you run this code:
 => Compilling process
 
 *Just open teminal (your locate file/folder) 
-** type [ g++ numhidseries.cpp ]         //copy without [] \n
+** type [ g++ numhidseries.cpp ]         //copy without [] 
 
 => After type ** it will create a.out file, now you need to run from a.out. Ok copy next line for run Program
 
