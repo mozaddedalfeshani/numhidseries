@@ -1,15 +1,25 @@
 #include <iostream>
 
 using namespace std;
+class checker
+{
+
+public:
+    int count;
+};
 int main()
 {
 
+    checker wrong;
+    wrong.count = 0;
+
     // int array[1000];
-    short int userarraysize;
+    short int remove_quantity;
     short int i, in;
     short int last_value, temo, temp;
     short int arrayvaluetemp;
     int temp3;
+    int check;
 
     int start, arraydtector;
 
@@ -25,19 +35,42 @@ again:
 input:
     cout << "How Many Number You want to remove from series ?"
          << endl;
-    cin >> userarraysize;
-    int array[userarraysize + 1];
-    if (userarraysize > last_value || userarraysize < in)
+    cin >> remove_quantity;
+    int array[remove_quantity + 1];
+    // check the remove quantity
+    int limit = last_value - in;
+
+    // check the remove number is gone out or not!
+
+    if (wrong.count > 3)
     {
-        cout << "Enter Correct Value" << endl;
+        cout << "\n\nNote::\n  Please Enter A number which less than the substraction of last value and first value: \n\n";
+        wrong.count--;
+        goto input;
+    }
+    else if (remove_quantity < limit)
+    {
+        goto next;
+    }
+    else
+    {
+        cout << "limit exced" << endl;
+        wrong.count++;
+
         goto input;
     }
 
+    // if (userarraysize > last_value || userarraysize < in)
+    // {
+    //     cout << "Enter Correct Value" << endl;
+    //     goto input;
+    // }
+next:
     cout << "Enter those number which you won't show in terminal ?" << endl;
 
     // Input Hide numbers
 
-    for (short int input = 1; input <= userarraysize;)
+    for (short int input = 1; input <= remove_quantity;)
     {
         cin >> temp3;
         if (temp3 >= in && temp3 <= last_value)
@@ -53,9 +86,9 @@ input:
 
     // shorting Input hidden number
 
-    for (short int shorting = 1; shorting <= userarraysize; shorting++)
+    for (short int shorting = 1; shorting <= remove_quantity; shorting++)
     {
-        for (short int compare = shorting; compare <= userarraysize; compare++)
+        for (short int compare = shorting; compare <= remove_quantity; compare++)
         {
             if (array[shorting] < array[compare])
             {
@@ -71,7 +104,7 @@ input:
     cout << "Your deserved hidden number , by serially:\n"
          << endl;
 
-    for (i = userarraysize; i >= 1; i--)
+    for (i = remove_quantity; i >= 1; i--)
     {
         cout << "" << array[i] << "" << endl;
     }
@@ -82,7 +115,7 @@ input:
 
     // print fast to last number and hide deserved number
 
-    temo = userarraysize;
+    temo = remove_quantity;
     for (i = in; i <= last_value; i++)
     {
         if (array[temo] == i)
